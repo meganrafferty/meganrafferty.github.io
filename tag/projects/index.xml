@@ -50,8 +50,35 @@
       <link>https://meganrafferty.github.io/project/covid_dashboard/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       <guid>https://meganrafferty.github.io/project/covid_dashboard/</guid>
-      <description>&lt;p&gt;The Texas School District COVID-19 Monitoring Dashboard was a dashboard built by my team at the Texas Policy Lab for Texas policymakers (and any other interested parties) to survey the landscape of COVID-19 in their school districts.&lt;/p&gt;
-&lt;p&gt;The app was built with R and is a Shiny web application. While I contributed to the front-end development, I was primarily responsible for scientific oversight and back-end development, including data retrieval, wrangling, and testing.&lt;/p&gt;
+      <description>&lt;p&gt;The Texas School District COVID-19 Monitoring Dashboard was a dashboard built by my team at the Texas Policy Lab to help Texas policymakers, school districts, and parents of school-age students make better and more informed decisions about COVID-19 mitigation during the pandemic. The dashboard was developed based on guidance from the Centers for Disease Control (CDC) and tracks several standardized metrics, including case numbers, test positivity rates, and hospital capacity, and transmission risk levels within counties and school districts.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_1ac736291a193d258e68a04ee1e6c55d.webp 400w,
+               /../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_7518882515164efe798f299648452b60.webp 760w,
+               /../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://meganrafferty.github.io/../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_1ac736291a193d258e68a04ee1e6c55d.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;455&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 </description>
     </item>
     

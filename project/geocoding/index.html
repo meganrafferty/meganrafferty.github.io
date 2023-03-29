@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: March 27, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro:wght@200;300;430;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro:wght@200;300;430;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.eb542a838dd1581c965177648fc53124.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<meta name="description" content="How-to for common geocoding tasks" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://meganrafferty.github.io/project/geocoding/" />
+<link rel="canonical" href="https://meganrafferty.github.io/project/geocoding/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu8e6806e14b71a133e34a8902555b6f91_8319_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu8e6806e14b71a133e34a8902555b6f91_8319_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#3c8c86" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://meganrafferty.github.io/project/geocoding/featured.jpg" />
+<meta property="og:site_name" content="Megan Rafferty" />
+<meta property="og:url" content="https://meganrafferty.github.io/project/geocoding/" />
+<meta property="og:title" content="Geocoding with ArcGIS and Nominatim | Megan Rafferty" />
+<meta property="og:description" content="How-to for common geocoding tasks" /><meta property="og:image" content="https://meganrafferty.github.io/project/geocoding/featured.jpg" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2022-06-17T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2022-06-17T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://meganrafferty.github.io/project/geocoding/"
+  },
+  "headline": "Geocoding with ArcGIS and Nominatim",
+  
+  "image": [
+    "https://meganrafferty.github.io/project/geocoding/featured.jpg"
+  ],
+  
+  "datePublished": "2022-06-17T00:00:00Z",
+  "dateModified": "2022-06-17T00:00:00Z",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Megan Rafferty",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://meganrafferty.github.io/media/icon_hu8e6806e14b71a133e34a8902555b6f91_8319_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "How-to for common geocoding tasks"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Geocoding with ArcGIS and Nominatim | Megan Rafferty</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="1fef131b8027300e0e282ad93157465b" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Megan Rafferty</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Megan Rafferty</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/about/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Geocoding with ArcGIS and Nominatim</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 17, 2022
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 436px;">
+  <div style="position: relative">
+    <img src="/project/geocoding/featured_hu011ee4971191f53b0b08b44bc02386e0_2198729_720x2500_fit_q100_h2_lanczos.webp" width="720" height="436" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Geocoding is the process of converting a physical address or location into geographical coordinates and is useful in a wide range of applications and industries that involve spatial data. This report provides an introduction to two basic geocoding tasks&ndash;geocoding physical addresses and identifying corresponding census tracts&ndash;and includes instructions for using ArcGIS ($) and Nominatim API in R (free).</p>
+<p>For further instruction, see ArcGIS documentation <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/geocoding/an-overview-of-the-geocoding-toolbox.htm" target="_blank" rel="noopener">here</a> and Nominatim <a href="https://nominatim.openstreetmap.org/ui/search.html" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="prep-clean-and-standardize-addresses">Prep, clean, and standardize addresses</h3>
+<p>Before geocoding, addresses should be cleaned and prepared to standard postal format in order to obtain reliable geocodes, regardless of the method used (though it is undoubtedly more important when using the Nominatim API). While ArcGIS can handle minor spelling errors, certain spelling and formatting errors can still lead to inaccurate geocodes. Common cleaning and preparation steps may include:</p>
+<ul>
+<li>Correcting common spelling errors (e.g., city names)</li>
+<li>Abbreviating address suffixes (e.g., drive should be dr)</li>
+<li>Replacing incorrect zip codes with five zeros (i.e., 00000)</li>
+<li>Miscellaneous cleaning (e.g., removing random symbols, multiple spaces, etc.)</li>
+<li>Saving new address file (for ArcGIS, addresses can either be stored in a single field with address components separated by a comma or in multiple fields)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">address_long</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;lane&#34;</span><span class="p">,</span> <span class="s">&#34;road&#34;</span><span class="p">,</span> <span class="s">&#34;drive&#34;</span><span class="p">,</span> <span class="s">&#34;drv&#34;</span><span class="p">,</span> <span class="s">&#34;street&#34;</span><span class="p">,</span> <span class="s">&#34;apartment&#34;</span><span class="p">,</span> <span class="s">&#34;avenue&#34;</span><span class="p">,</span> <span class="s">&#34;boulevard&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                  <span class="s">&#34;expressway&#34;</span><span class="p">,</span> <span class="s">&#34;highway&#34;</span><span class="p">,</span> <span class="s">&#34;highwat&#34;</span><span class="p">,</span> <span class="s">&#34;suite&#34;</span><span class="p">,</span> <span class="s">&#34;court&#34;</span><span class="p">,</span> <span class="s">&#34;circle&#34;</span><span class="p">,</span> <span class="s">&#34;circlr&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">address_abrv</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;ln&#34;</span><span class="p">,</span> <span class="s">&#34;rd&#34;</span><span class="p">,</span> <span class="s">&#34;dr&#34;</span><span class="p">,</span> <span class="s">&#34;dr&#34;</span><span class="p">,</span> <span class="s">&#34;st&#34;</span><span class="p">,</span> <span class="s">&#34;apt&#34;</span><span class="p">,</span> <span class="s">&#34;ave&#34;</span><span class="p">,</span> <span class="s">&#34;blvd&#34;</span><span class="p">,</span> <span class="s">&#34;expy&#34;</span><span class="p">,</span> <span class="s">&#34;hwy&#34;</span><span class="p">,</span> <span class="s">&#34;hwy&#34;</span><span class="p">,</span> <span class="s">&#34;ste&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                  <span class="s">&#34;ct&#34;</span><span class="p">,</span> <span class="s">&#34;cir&#34;</span><span class="p">,</span> <span class="s">&#34;cir&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">clean_st_address</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">st_address</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">zip</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dplyr</span><span class="o">::</span><span class="nf">drop_na</span><span class="p">(</span><span class="n">st_address</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dplyr</span><span class="o">::</span><span class="nf">mutate</span><span class="p">(</span><span class="n">st_address</span> <span class="o">=</span> <span class="nf">tolower</span><span class="p">(</span><span class="n">st_address</span><span class="p">))</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dplyr</span><span class="o">::</span><span class="nf">mutate</span><span class="p">(</span><span class="n">zip</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">stringr</span><span class="o">::</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">zip</span><span class="p">,</span> <span class="s">&#39;\\d\\d\\d\\d\\d&#39;</span><span class="p">),</span> <span class="n">zip</span><span class="p">,</span> <span class="s">&#34;00000&#34;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dplyr</span><span class="o">::</span><span class="nf">mutate</span><span class="p">(</span><span class="n">st_address</span> <span class="o">=</span> <span class="nf">gsub</span><span class="p">(</span><span class="s">&#34;\\s+&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">,</span> <span class="n">st_address</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">st_address</span> <span class="o">=</span> <span class="nf">gsub</span><span class="p">(</span><span class="s">&#34;\\.|\\,|\\sapt.*|\\sunit.*|\\s#.*|\\#|\\-|\\s\\d+&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">st_address</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">st_address</span> <span class="o">=</span> <span class="n">stringi</span><span class="o">::</span><span class="nf">stri_replace_all_fixed</span><span class="p">(</span><span class="n">st_address</span><span class="p">,</span> <span class="n">address_long</span><span class="p">,</span> <span class="n">address_abrv</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                                               <span class="n">vectorize_all</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">))</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dplyr</span><span class="o">::</span><span class="nf">mutate</span><span class="p">(</span><span class="n">city</span> <span class="o">=</span> <span class="nf">tolower</span><span class="p">(</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&#34;\\s+&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">,</span> <span class="n">city</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">city</span> <span class="o">=</span> <span class="nf">gsub</span><span class="p">(</span><span class="s">&#34;\\,.*|\\stx|\\.&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">city</span><span class="p">))</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="geocoding-with-arcgis">Geocoding with ArcGIS</h2>
+<h3 id="1-geocode-addresses">1. Geocode addresses</h3>
+<p>To begin, log in to ArcGIS Pro with NetID/username and password. Follow the steps below to obtain latitude and longitude coordinates.</p>
+<ul>
+<li>New project → Map</li>
+<li>Go to Geoprocessing pane on right side of window → Toolboxes → click on Geocoding Tools → select Geocode Addresses
+<ul>
+<li>Fill in/select parameters
+<ul>
+<li>Input table = addresses to be geocoded</li>
+<li>Input address locator = “ArcGIS World Geocoding Service”</li>
+<li>Output feature class = folder and file name for saving</li>
+<li>Preferred location type = “Address location”</li>
+</ul>
+</li>
+<li>Click Run</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-identify-corresponding-census-tracts">1.1. Identify corresponding census tracts</h3>
+<p>If you need to identify corresponding census tracts, follow the instructions below. Otherwise, continue to step 2.</p>
+<ul>
+<li>Download <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.2010.html" target="_blank" rel="noopener">TIGER/Line shapefile</a> for state</li>
+<li>Add shapefile data to map: Map → Add Data → Add data to the map
+<ul>
+<li>Shapefile must be saved in same folder as address data</li>
+</ul>
+</li>
+<li>Go to Geoprocessing pane on right → Toolboxes → Analysis tools → Overlay → Spatial Join
+<ul>
+<li>Fill in/select parameters
+<ul>
+<li>Target features = geocoded addresses</li>
+<li>Join features = shapefile</li>
+<li>Output feature class = folder and file name for saving</li>
+<li>Join operator = &ldquo;join one to one&rdquo;</li>
+<li>Match option = &ldquo;within&rdquo;</li>
+</ul>
+</li>
+<li>Click Run</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-export-geo-data">2. Export geo data</h3>
+<ul>
+<li>To view resulting table, right click on table name in Contents pane → select Attribute Table</li>
+<li>To export data, click on the three lines in upper right corner of attribute table → select Export → save data with chosen file name + .csv (e.g., file_name.csv)</li>
+</ul>
+<h3 id="3-remove-unreliable-geocodes">3. Remove unreliable geocodes</h3>
+<ul>
+<li>Remove addresses identified as being outside of the state</li>
+<li>Remove addresses that did not return one of the following Addr_type: Point Address, Street Address, or Subaddress</li>
+<li>Drop match scores (Score) below 90%</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">clean_arcgis_data</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">filter</span><span class="p">(</span><span class="n">Region</span> <span class="o">==</span> <span class="n">state</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">Join_Count</span> <span class="o">==</span> <span class="m">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">Addr_type</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;PointAddress&#34;</span><span class="p">,</span> <span class="s">&#34;StreetAddress&#34;</span><span class="p">,</span> <span class="s">&#34;Subaddress&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">           <span class="n">Score</span> <span class="o">&gt;=</span> <span class="m">90</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">rename</span><span class="p">(</span><span class="n">address</span> <span class="o">=</span> <span class="s">&#34;IN_SingleLine&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="geocoding-with-nominatim-api">Geocoding with Nominatim API</h2>
+<p>While Nominatim may not be as accurate as ArcGIS, it is a decent alternative if you do not have access to an ArcGIS license and are looking for a free option. Below are the functions you will need to geocode your addresses. <em>Be sure to check Nominatim&rsquo;s Usage Policy for information on usage and call limits.</em></p>
+<h3 id="1-generate-api-call">1. Generate API call</h3>
+<p>This function will construct the search request.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">nominatim_search</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">search_query_url</span><span class="p">,</span> <span class="n">country_url</span><span class="p">,</span> <span class="n">language_url</span><span class="p">,</span> <span class="n">email_url</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">library</span><span class="p">(</span><span class="n">RCurl</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">nominatim_search_api</span> <span class="o">&lt;-</span> <span class="s">&#34;https://nominatim.openstreetmap.org/search/&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">search_query_url</span> <span class="o">&lt;-</span> <span class="nf">sapply</span><span class="p">(</span><span class="n">search_query_url</span><span class="p">,</span> <span class="n">as.list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">search_query_url</span> <span class="o">&lt;-</span> <span class="nf">sapply</span><span class="p">(</span><span class="n">search_query_url</span><span class="p">,</span> <span class="n">URLencode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">is.null</span><span class="p">(</span><span class="n">country_url</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">country_url</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&#34;&amp;countrycodes=&#34;</span><span class="p">,</span> <span class="n">country_url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">parameters_url</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&#34;?format=json&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="s">&#34;&amp;addressdetails=1&amp;extratags=1&amp;limit=1&#34;</span><span class="p">,</span> <span class="n">country_url</span><span class="p">,</span> <span class="s">&#34;&amp;accept-language=&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                           <span class="n">language_url</span><span class="p">,</span> <span class="s">&#34;&amp;email=&#34;</span><span class="p">,</span> <span class="n">email_url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">nominatim_search_call</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="n">nominatim_search_api</span><span class="p">,</span><span class="n">search_query_url</span><span class="p">,</span> <span class="n">parameters_url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">return</span><span class="p">(</span><span class="n">nominatim_search_call</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="2-extract-data-from-json">2. Extract data from json</h3>
+<p>This function will extract the relevant data from the JSON output by coverting it to an R object and creating a data frame.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">get_geodata_from_json</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">geodata_json</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># convert json output into r object</span>
+</span></span><span class="line"><span class="cl">  <span class="n">geodata</span> <span class="o">&lt;-</span> <span class="nf">lapply</span><span class="p">(</span><span class="n">geodata_json</span><span class="p">,</span> <span class="n">fromJSON</span><span class="p">,</span> <span class="n">simplifyVector</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="c1"># extract coordinates, address, county, and importance</span>
+</span></span><span class="line"><span class="cl">  <span class="n">extracted_data</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span> <span class="n">lng</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span> <span class="n">address</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span> <span class="n">county</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span> <span class="n">importance</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">geodata</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">if</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">geodata[[i]]</span><span class="p">)</span> <span class="o">!=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1"># get data</span>
+</span></span><span class="line"><span class="cl">      <span class="n">lat</span> <span class="o">&lt;-</span> <span class="n">geodata[[i]][[1]]</span><span class="o">$</span><span class="n">lat</span>
+</span></span><span class="line"><span class="cl">      <span class="n">lng</span> <span class="o">&lt;-</span> <span class="n">geodata[[i]][[1]]</span><span class="o">$</span><span class="n">lon</span>
+</span></span><span class="line"><span class="cl">      <span class="n">address</span> <span class="o">&lt;-</span> <span class="n">geodata[[i]][[1]]</span><span class="o">$</span><span class="n">display_name</span>
+</span></span><span class="line"><span class="cl">      <span class="n">county</span> <span class="o">&lt;-</span> <span class="n">geodata[[i]][[1]]</span><span class="o">$</span><span class="n">address</span><span class="o">$</span><span class="n">county</span>
+</span></span><span class="line"><span class="cl">      <span class="n">importance</span> <span class="o">&lt;-</span> <span class="n">geodata[[i]][[1]]</span><span class="o">$</span><span class="n">importance</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="c1"># get rid of NULLs</span>
+</span></span><span class="line"><span class="cl">      <span class="n">info</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lng</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">county</span><span class="p">,</span> <span class="n">importance</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">for </span><span class="p">(</span><span class="n">j</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">info</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">if </span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">info[[j]]</span><span class="p">))</span> <span class="n">info[[j]]</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="c1"># create output data frame</span>
+</span></span><span class="line"><span class="cl">      <span class="n">extracted_data[i</span><span class="p">,</span> <span class="n">]</span> <span class="o">&lt;-</span> <span class="n">info</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">extracted_data[i</span><span class="p">,</span> <span class="n">]</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">return</span><span class="p">(</span><span class="n">extracted_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="3-main-function">3. Main function</h3>
+<p>This function using the functions above to create the main function for our API call and will return a data frame with the geocoded data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">geocode_nominatim</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">search_query</span><span class="p">,</span> <span class="n">country</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span> <span class="n">language</span> <span class="o">=</span> <span class="s">&#34;en&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                              <span class="n">fields</span> <span class="o">=</span> <span class="s">&#34;coordinates&#34;</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">library</span><span class="p">(</span><span class="n">RCurl</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># construct url for geocoding</span>
+</span></span><span class="line"><span class="cl">  <span class="n">url_geocode</span> <span class="o">&lt;-</span> <span class="nf">url_nominatim_search</span><span class="p">(</span><span class="n">search_query</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># get data from nominatim</span>
+</span></span><span class="line"><span class="cl">  <span class="n">geodata_json</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">pb</span> <span class="o">=</span> <span class="nf">txtProgressBar</span><span class="p">(</span><span class="n">min</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">max</span> <span class="o">=</span> <span class="nf">length</span><span class="p">(</span><span class="n">url_geocode</span><span class="p">),</span> <span class="n">initial</span> <span class="o">=</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">url_geocode</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">setTxtProgressBar</span><span class="p">(</span><span class="n">pb</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">geodata_json[i]</span> <span class="o">&lt;-</span> <span class="nf">GET</span><span class="p">(</span><span class="n">url_geocode[i]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">Sys.sleep</span><span class="p">(</span><span class="m">1.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">close</span><span class="p">(</span><span class="n">pb</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># get data from json output</span>
+</span></span><span class="line"><span class="cl">  <span class="n">geodata_df</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="nf">sapply</span><span class="p">(</span><span class="n">search_query</span><span class="p">,</span> <span class="n">as.character</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                              <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">names</span><span class="p">(</span><span class="n">geodata_df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="s">&#34;search query&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">rownames</span><span class="p">(</span><span class="n">geodata_df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">  <span class="n">geodata_df[</span><span class="p">,</span> <span class="m">2</span><span class="o">:</span><span class="m">6</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="nf">get_geodata_from_json_nominatim</span><span class="p">(</span><span class="n">geodata_json</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">geodata_df_query</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">search_query</span> <span class="o">=</span> <span class="n">geodata_df[</span><span class="p">,</span> <span class="m">1</span><span class="n">]</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                 <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">geodata_df_coordinates</span> <span class="o">&lt;-</span> <span class="n">geodata_df[</span><span class="p">,</span> <span class="m">2</span><span class="o">:</span><span class="m">6</span><span class="n">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># return data frame with the geodata</span>
+</span></span><span class="line"><span class="cl">  <span class="n">geodata_result</span> <span class="o">&lt;-</span> <span class="n">geodata_df_query</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">if</span><span class="p">(</span><span class="s">&#34;all&#34;</span> <span class="o">%in%</span> <span class="n">fields</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">geodata_result</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">geodata_result</span><span class="p">,</span> <span class="n">geodata_df[</span><span class="p">,</span> <span class="m">2</span><span class="o">:</span><span class="m">6</span><span class="n">]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">if</span><span class="p">(</span><span class="s">&#34;coordinates&#34;</span> <span class="o">%in%</span> <span class="n">fields</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">geodata_result</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">geodata_result</span><span class="p">,</span> <span class="n">geodata_df_coordinates</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nf">return</span><span class="p">(</span><span class="n">geodata_result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="4-run">4. Run</h3>
+<p>Run the code below to generate the geocodes.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">email</span> <span class="o">&lt;-</span> <span class="s">&#34;your-email&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">defaultW</span> <span class="o">&lt;-</span> <span class="nf">getOption</span><span class="p">(</span><span class="s">&#34;warn&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">options</span><span class="p">(</span><span class="n">warn</span> <span class="o">=</span> <span class="m">-1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">coords_nominatim</span> <span class="o">&lt;-</span> <span class="nf">geocode_nominatim</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">country</span> <span class="o">=</span> <span class="s">&#34;us&#34;</span><span class="p">,</span> <span class="n">fields</span> <span class="o">=</span> <span class="s">&#34;all&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                      <span class="n">email</span> <span class="o">=</span> <span class="n">email</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">options</span><span class="p">(</span><span class="n">warn</span> <span class="o">=</span> <span class="n">defaultW</span><span class="p">)</span>
+</span></span></code></pre></div>
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/posts/">Posts</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2023 Megan Rafferty
+  </p>
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

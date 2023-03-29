@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://meganrafferty.github.io/sitemap.xml

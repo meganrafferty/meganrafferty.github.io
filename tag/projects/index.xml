@@ -38,7 +38,7 @@
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://meganrafferty.github.io/project/ml_viz/viz_demo.gif&#34;
+           src=&#34;https://meganrafferty.github.io/../assets/media/viz_demo.gif&#34;
            loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -86,10 +86,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /project/predictors-of-survival-acc/survival_results_hu92017aae938d77c020bb4c5ca0c93118_559611_25a2650dd6b1f9a3c4719b0cfacbb0c3.webp 400w,
-               /project/predictors-of-survival-acc/survival_results_hu92017aae938d77c020bb4c5ca0c93118_559611_ee3c37df3cdd2abb19f82f9a95dbc6fa.webp 760w,
-               /project/predictors-of-survival-acc/survival_results_hu92017aae938d77c020bb4c5ca0c93118_559611_1200x1200_fit_q100_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://meganrafferty.github.io/project/predictors-of-survival-acc/survival_results_hu92017aae938d77c020bb4c5ca0c93118_559611_25a2650dd6b1f9a3c4719b0cfacbb0c3.webp&#34;
+               /../assets/media/survival_results_hu92017aae938d77c020bb4c5ca0c93118_559611_fb05529f116d56266463d9bdc7c9f48a.webp 400w,
+               /../assets/media/survival_results_hu92017aae938d77c020bb4c5ca0c93118_559611_ee3c37df3cdd2abb19f82f9a95dbc6fa.webp 760w,
+               /../assets/media/survival_results_hu92017aae938d77c020bb4c5ca0c93118_559611_1200x1200_fit_q100_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://meganrafferty.github.io/../assets/media/survival_results_hu92017aae938d77c020bb4c5ca0c93118_559611_fb05529f116d56266463d9bdc7c9f48a.webp&#34;
                width=&#34;760&#34;
                height=&#34;430&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -115,10 +115,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /project/predictors-of-survival-acc/survival_results_2_hu92017aae938d77c020bb4c5ca0c93118_329965_8a74b451692e323b036486ce01ca589f.webp 400w,
-               /project/predictors-of-survival-acc/survival_results_2_hu92017aae938d77c020bb4c5ca0c93118_329965_a52b0010d70855346ad17dff0f9ec0cd.webp 760w,
-               /project/predictors-of-survival-acc/survival_results_2_hu92017aae938d77c020bb4c5ca0c93118_329965_1200x1200_fit_q100_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://meganrafferty.github.io/project/predictors-of-survival-acc/survival_results_2_hu92017aae938d77c020bb4c5ca0c93118_329965_8a74b451692e323b036486ce01ca589f.webp&#34;
+               /../assets/media/survival_results_2_hu92017aae938d77c020bb4c5ca0c93118_329965_975c39a1e44897a1c59c4ba4563972e0.webp 400w,
+               /../assets/media/survival_results_2_hu92017aae938d77c020bb4c5ca0c93118_329965_a52b0010d70855346ad17dff0f9ec0cd.webp 760w,
+               /../assets/media/survival_results_2_hu92017aae938d77c020bb4c5ca0c93118_329965_1200x1200_fit_q100_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://meganrafferty.github.io/../assets/media/survival_results_2_hu92017aae938d77c020bb4c5ca0c93118_329965_975c39a1e44897a1c59c4ba4563972e0.webp&#34;
                width=&#34;760&#34;
                height=&#34;430&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

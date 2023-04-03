@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 30, 2023 --><html lang="en-us" >
+<!-- Last Published: April 3, 2023 --><html lang="en-us" >
 
 
 <head>
@@ -899,7 +899,7 @@
 </span></span><span class="line"><span class="cl">  <span class="nf">return</span><span class="p">(</span><span class="n">extracted_data</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="3-main-function">3. Main function</h3>
-<p>This function using the functions above to create the main function for our API call and will return a data frame with the geocoded data.</p>
+<p>This function uses the functions above to create the main function for our API call and will return a data frame with the geocoded data.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">geocode_nominatim</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">search_query</span><span class="p">,</span> <span class="n">country</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span> <span class="n">language</span> <span class="o">=</span> <span class="s">&#34;en&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                              <span class="n">fields</span> <span class="o">=</span> <span class="s">&#34;coordinates&#34;</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  

@@ -5,7 +5,7 @@
     <link>https://meganrafferty.github.io/</link>
       <atom:link href="https://meganrafferty.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Megan Rafferty</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
       <url>https://meganrafferty.github.io/media/icon_hu8e6806e14b71a133e34a8902555b6f91_8319_512x512_fill_lanczos_center_3.png</url>
       <title>Megan Rafferty</title>
@@ -29,6 +29,45 @@
 &lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Further event details, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mapping Social Vulnerability</title>
+      <link>https://meganrafferty.github.io/project/mapping-social-vulnerability/</link>
+      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://meganrafferty.github.io/project/mapping-social-vulnerability/</guid>
+      <description>&lt;p&gt;Social vulnerability refers to a community&amp;rsquo;s resilience when confronted by external stresses on human health. Factors such as poverty and lack of access to transportation may weaken a community&amp;rsquo;s ability to withstand the impacts from adverse events such as natural disasters and public health crises, which can lead to human suffering and financial loss. At the individual level, social vulnerability can also impact one&amp;rsquo;s ability to manage chronic conditions like cancer or diabetes and has been associated with a higher likelihood of &lt;a href=&#34;https://www.ahajournals.org/doi/10.1161/CIRCOUTCOMES.121.008612&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in-hospital mortality with COVID-19&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://www.atsdr.cdc.gov/placeandhealth/svi/fact_sheet/fact_sheet.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;social vulnerability index (SVI)&lt;/a&gt; was created by the Centers for Disease Control &amp;amp; Prevention (CDC) and the Agency for Toxic Substances and Disease Registry (ATSDR) to measure social vulnerability. While initially developed for emergency preparedness, such as how to allocate resources during a crisis, the SVI has since been adopted to risk stratification and healthcare efforts due to the link between SVI and the social determinants of health. In other words, social vulnerability is tied to overall health and wellness and can negatively impact both individuals and their communities, such as leading to higher rates of diseases and healthcare utilization.&lt;/p&gt;
+&lt;p&gt;I created the &amp;ldquo;Mapping Social Vulnerability&amp;rdquo; tool to explore social vulnerability across the United States. The interactive tool can be used to identify communities at higher risk of adverse health outcomes or with greater social and healthcare needs.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /../assets/media/overall_svi_hu7fba9da1679ce4a56c592454604cb9c1_502955_254153f2ae35bfce3d8cc99df1f59d17.webp 400w,
+               /../assets/media/overall_svi_hu7fba9da1679ce4a56c592454604cb9c1_502955_12b73ae0b1df8ca2db93c84934bd9a0e.webp 760w,
+               /../assets/media/overall_svi_hu7fba9da1679ce4a56c592454604cb9c1_502955_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://meganrafferty.github.io/../assets/media/overall_svi_hu7fba9da1679ce4a56c592454604cb9c1_502955_254153f2ae35bfce3d8cc99df1f59d17.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;465&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -224,7 +263,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;extracted_data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-main-function&#34;&gt;3. Main function&lt;/h3&gt;
-&lt;p&gt;This function using the functions above to create the main function for our API call and will return a data frame with the geocoded data.&lt;/p&gt;
+&lt;p&gt;This function uses the functions above to create the main function for our API call and will return a data frame with the geocoded data.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;geocode_nominatim&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;search_query&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;country&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;language&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                              &lt;span class=&#34;n&#34;&gt;fields&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;coordinates&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
@@ -453,7 +492,7 @@ Figure 1: A fancy pie chart.
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://meganrafferty.github.io/project/predictors-of-survival-acc/</guid>
       <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
-&lt;p&gt;Adrenal cortical carcinoma (ACC) is a rare and aggressive cancer with poor prognosis. It is the second most aggressive endocrine cancer following anaplastic thyroid cancer and has an estimated annual incidence of 0.7–2.0 cases/million. Because of the low incidence of these tumors, data on prognostic factors and survival outcomes are limited. The aim of this retrospective study was to examine demographic, clinical, and tumor characteristics as potential predictors of overall survival using the 1975-2016 Surveillance, Epidemiology, and End Results (SEER) program data set, which encompasses approximately 34.6% of the US population.&lt;/p&gt;
+&lt;p&gt;Adrenal cortical carcinoma (ACC) is a rare and aggressive cancer with poor prognosis. It is the second most aggressive endocrine cancer following anaplastic thyroid cancer and has an estimated annual incidence of 0.7–2.0 cases/million. Because of the low incidence of these tumors, data on prognostic factors and survival outcomes are limited. The aim of this analysis was to examine demographic, clinical, and tumor characteristics as potential predictors of overall survival using the 1975-2016 Surveillance, Epidemiology, and End Results (SEER) program data set, which encompasses approximately 34.6% of the US population.&lt;/p&gt;
 &lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
 &lt;p&gt;Reported cases of ACC from 2006 to 2015 were identified, and relevant demographic and clinicopathological data were retrieved, including age at diagnosis, sex, race and ethnicity, tumor laterality, tumor grade, tumor size, clinical summary stage, and surgical treatment. Cases were limited to adults to account for established differences between adult and pediatric ACC patients in incidence, clinical presentation, and biological behaviors. Multivariable Cox proportional hazards regression was utilized to examine the associations between overall survival and demographic and tumor-specific variables. Tree-based survival analysis (TBSA) was used to further elucidate the relationship between potential predictors and mortality risk.&lt;/p&gt;
 &lt;p&gt;While not as widely used as the Cox Proportional Hazards model for survival data, survival trees are useful nonparametric alternatives. Tree-based methods are simple, easily interpreted, and flexible. Similar to other regression tree analyses, TBSA adaptively partitions the study populations into groups that have different survival distributions, helping to identify hierarchical predictive relationships. The method used in this analysis follows a recursive partitioning algorithm that adopts most aspects of the well-known classification and regression tree algorithm. Using the first step of a full likelihood estimation procedure for the splitting criterion, this method is able to obtain tree-structured relative risk estimates for censored survival data. After growing the initial survival tree, cross-validation and a cost-complexity pruning algorithm were utilized to identify the optimally-pruned tree.&lt;/p&gt;
@@ -624,7 +663,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-628419573&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-618937524&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -634,7 +673,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-628419573&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-618937524&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

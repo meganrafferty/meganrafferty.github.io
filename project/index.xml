@@ -85,6 +85,82 @@
     </item>
     
     <item>
+      <title>Predicting In-Hospital Mortality for Traumatic Brain Injury</title>
+      <link>https://meganrafferty.github.io/project/predicting-mortality-tbi/</link>
+      <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://meganrafferty.github.io/project/predicting-mortality-tbi/</guid>
+      <description>&lt;p&gt;&lt;em&gt;The following is an overview of an independent project of mine. These findings have not been peer reviewed.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;objective&#34;&gt;Objective&lt;/h3&gt;
+&lt;p&gt;Traumatic Brain Injury (TBI) is a significant health concern that results in disability and death of thousands of people each year in the United States. TBI occurs when a sudden trauma causes damage to the brain and is characterized by a disruption in the normal function of the brain. Symptoms can be mild, moderate, or severe depending on the intensity of damage to the brain tissue. This aim of this analysis was to predict in-hospital mortality in TBI patients with diagnosis of intracranial hemorrhage (ICH), a common and severe feature of severe TBI. Identifying modifiable risk factors and predicting outcomes among ICH patients may be useful in managing prognostic expectations, making treatment decisions, reducing in-hospital mortality, and improving health outcomes.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;p&gt;Statewide hospital trauma registry data from years 2012 to 2016 were obtained and relevant demographic, injury, and clinical variables were selected for this analysis. The dataset was filtered by ICD-9 codes and other clinical variables to identify patients admitted with traumatic brain injury and intracranial hemorrhage. Patients under the age of 20 were excluded. Missing values were imputed or dropped, and relevant variables were transformed (e.g., encoding, scaling) and engineered as necessary. The dataset was then randomly split with a 75:25 ratio into training and test sets, totaling 8,215 and 2,738 observations, respectively.&lt;/p&gt;
+&lt;p&gt;Logistic regression, random forest, and gradient boosting models were investigated. For logistic regression, LASSO was used for feature selection, and cubic splines were used for non-linearly associated continuous predictors. For random forest and boosting, all initially selected variables were included in the models. Hyperperamaters were tuned using stratified 5-fold cross-validation in order to find the optimal values. To assess and compare predictive performance for each model on the test set, accuracy, area under the curve (AUC), sensitivity, and specificity were computed. Receiver Operator Curves (ROC) were constructed to illustrate predictive performance. In addition, model performance was assessed and compared after using a downsampling technique on the training set in an attempt to correct the bias introduced by a class imbalance.&lt;/p&gt;
+&lt;h3 id=&#34;findings&#34;&gt;Findings&lt;/h3&gt;
+&lt;p&gt;Following variable selection, the final model for logistic regression included gender, age, systolic blood pressure, ICU length of stay, primary payment method, Glasgow coma score (GCS), injury severity score (ISS), and concussion. Significant interaction terms between ICU stay and ISS were included. For random forest and boosting models, all initially selected variables were included in the model. The most important predictors were ISS, GCS, and ICU stay based on feature importance scores. Performance metrics for each of the three models are shown below in Table 1.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /../assets/media/tbi_table_hu7fba9da1679ce4a56c592454604cb9c1_183418_673cafb6af4a96a62fdf8f8823f8e3d6.webp 400w,
+               /../assets/media/tbi_table_hu7fba9da1679ce4a56c592454604cb9c1_183418_ef82ff301e2fb939d066a76182239e2c.webp 760w,
+               /../assets/media/tbi_table_hu7fba9da1679ce4a56c592454604cb9c1_183418_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://meganrafferty.github.io/../assets/media/tbi_table_hu7fba9da1679ce4a56c592454604cb9c1_183418_673cafb6af4a96a62fdf8f8823f8e3d6.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;208&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Overall, logistic regression outperformed both random forest and gradient boosting models across both data sets. All models had high predictive performance with the full data set, but logistic regression performed slightly better (AUC = 0.923) compared to gradient boosting (AUC = 0.903) and random forest (AUC = 0.886). However, all models had poor sensitivity (0.41-0.462). Considering the potential clinical application of rapid identification of high-risk patients, high sensitivity of the prediction model may be of greater importance to a clinician.&lt;/p&gt;
+&lt;p&gt;With the downsampled data set, all models saw an increase in AUC and sensitivity and a small decrease in specificity. Logistic regression (AUC = 0.934) once again outperform boosting (AUC = 0.912) and random forest (AUC = 0.914) in terms of AUC. However, the gradient boosting model had the greatest sensitivity (SN = 0.904) among models.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /../assets/media/tbi_roc_curves_hu7fba9da1679ce4a56c592454604cb9c1_317018_b3ce90ffaa5bf29e9cbcffd233ff5f5b.webp 400w,
+               /../assets/media/tbi_roc_curves_hu7fba9da1679ce4a56c592454604cb9c1_317018_05f5c99899aed2cb5f13b64fa401fb35.webp 760w,
+               /../assets/media/tbi_roc_curves_hu7fba9da1679ce4a56c592454604cb9c1_317018_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://meganrafferty.github.io/../assets/media/tbi_roc_curves_hu7fba9da1679ce4a56c592454604cb9c1_317018_b3ce90ffaa5bf29e9cbcffd233ff5f5b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;305&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;significance&#34;&gt;Significance&lt;/h3&gt;
+&lt;p&gt;Real-world data, such as those from trauma registries, provide a rich source of data for training predictive and prognostic models and can be used to make real-world impact in healthcare decision making. Early prediction of in-hospital mortality can help clinicians and other healthcare personnel manage prognostic expectations, inform resource management, make treatment decisions in a timely manner, and ensure that patients are receiving appropriate care.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Geocoding with ArcGIS and Nominatim</title>
       <link>https://meganrafferty.github.io/project/geocoding/</link>
       <pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate>
@@ -300,48 +376,12 @@
     </item>
     
     <item>
-      <title>Texas COVID-19 School District Monitoring Dashboard</title>
-      <link>https://meganrafferty.github.io/project/covid_dashboard/</link>
-      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://meganrafferty.github.io/project/covid_dashboard/</guid>
-      <description>&lt;p&gt;The Texas School District COVID-19 Monitoring Dashboard is a dashboard built by my team at the Texas Policy Lab to help Texas policymakers, school districts, and parents of school-age students make better and more informed decisions about COVID-19 mitigation during the pandemic. The dashboard was developed based on guidance from the Centers for Disease Control (CDC) and tracks several standardized metrics, including case numbers, test positivity rates, and hospital capacity, and transmission risk levels within counties and school districts.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_1ac736291a193d258e68a04ee1e6c55d.webp 400w,
-               /../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_7518882515164efe798f299648452b60.webp 760w,
-               /../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://meganrafferty.github.io/../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_1ac736291a193d258e68a04ee1e6c55d.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;455&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Predictors of Survival among Adrenal Cortical Carcinoma Cases</title>
       <link>https://meganrafferty.github.io/project/predictors-of-survival-acc/</link>
-      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://meganrafferty.github.io/project/predictors-of-survival-acc/</guid>
-      <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
+      <description>&lt;p&gt;&lt;em&gt;The following is an overview of an independent research project of mine that I presented at a national conference.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
 &lt;p&gt;Adrenal cortical carcinoma (ACC) is a rare and aggressive cancer with poor prognosis. It is the second most aggressive endocrine cancer following anaplastic thyroid cancer and has an estimated annual incidence of 0.7–2.0 cases/million. Because of the low incidence of these tumors, data on prognostic factors and survival outcomes are limited. The aim of this analysis was to examine demographic, clinical, and tumor characteristics as potential predictors of overall survival using the 1975-2016 Surveillance, Epidemiology, and End Results (SEER) program data set, which encompasses approximately 34.6% of the US population.&lt;/p&gt;
 &lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
 &lt;p&gt;Reported cases of ACC from 2006 to 2015 were identified, and relevant demographic and clinicopathological data were retrieved, including age at diagnosis, sex, race and ethnicity, tumor laterality, tumor grade, tumor size, clinical summary stage, and surgical treatment. Cases were limited to adults to account for established differences between adult and pediatric ACC patients in incidence, clinical presentation, and biological behaviors. Multivariable Cox proportional hazards regression was utilized to examine the associations between overall survival and demographic and tumor-specific variables. Tree-based survival analysis (TBSA) was used to further elucidate the relationship between potential predictors and mortality risk.&lt;/p&gt;
@@ -403,6 +443,43 @@
                src=&#34;https://meganrafferty.github.io/../assets/media/survival_results_2_hu92017aae938d77c020bb4c5ca0c93118_329965_8a74b451692e323b036486ce01ca589f.webp&#34;
                width=&#34;760&#34;
                height=&#34;430&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Texas COVID-19 School District Monitoring Dashboard</title>
+      <link>https://meganrafferty.github.io/project/covid_dashboard/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://meganrafferty.github.io/project/covid_dashboard/</guid>
+      <description>&lt;p&gt;The Texas School District COVID-19 Monitoring Dashboard is a dashboard built by my team at the Texas Policy Lab to help Texas policymakers, school districts, and parents of school-age students make better and more informed decisions about COVID-19 mitigation during the pandemic. The dashboard was developed based on guidance from the Centers for Disease Control (CDC) and tracks several standardized metrics, including case numbers, test positivity rates, and hospital capacity, and transmission risk levels within counties and school districts.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_1ac736291a193d258e68a04ee1e6c55d.webp 400w,
+               /../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_7518882515164efe798f299648452b60.webp 760w,
+               /../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_1200x1200_fit_q100_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://meganrafferty.github.io/../assets/media/covid_dashboard_hu789af5602b0564dea21bcf1e67237882_633297_1ac736291a193d258e68a04ee1e6c55d.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;455&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
